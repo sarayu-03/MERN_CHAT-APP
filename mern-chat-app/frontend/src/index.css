@@ -3,10 +3,29 @@
 @tailwind utilities;
 
 body {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/bg.png");
+	background: 
+		linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%),
+		url('/9120735.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	background-attachment: fixed;
+	min-height: 100vh;
+	position: relative;
+}
+
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: 
+		radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+		radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+	pointer-events: none;
+	z-index: 0;
 }
 
 /* dark mode looking scrollbar */
